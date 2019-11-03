@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bulma": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-player": "^1.13.0",
     "react-scripts": "3.2.0"
   },
   "scripts": {

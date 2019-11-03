@@ -1,0 +1,27 @@
+@import "~bulma/bulma";
+
+html {
+  body {
+
+    div#background{
+      pointer-events: none;
+    }
+    
+    div#app {
+      div.box {
+        position: absolute;
+        z-index: 100;
+        right: 25%;
+        left: 25%;
+        bottom: 0;
+        width: 50vw;
+        opacity: 90%;
+
+        * {
+          text-align: center;
+        }
+      }
+    }
+
+  }
+}
