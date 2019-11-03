@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=ryKoCor98hg&t=2h9m24s
 $ npm i
 ```
 
-2. `dev:server` を叩くと開発用のサーバが動きます
+2. `npm start` を叩くと開発用のサーバが動きます
 
 ```bash
 $ npm start
