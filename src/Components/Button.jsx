@@ -10,7 +10,8 @@ export function Button(props){
   , [setPlay]);
 
   Button.propTypes = {
-    button_label: PropTypes.string.isRequired
+    button_label: PropTypes.string.isRequired,
+    audio_src: PropTypes.object.isRequired
   };
 
   return(
