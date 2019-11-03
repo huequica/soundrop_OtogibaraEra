@@ -1,3 +1,5 @@
+[The previous repository](https://github.com/huequica/Archive_soundrop_OtogibaraEra) was Archived due to a bug in the development environment. This is the latest code.
+
 日本語のreadmeは[こちら](README_ja.md)になります
 
 # soundrop_OtogibaraEra
