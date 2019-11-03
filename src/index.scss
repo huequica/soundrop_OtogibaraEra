@@ -2,7 +2,6 @@
 
 html {
   body {
-
     div#background{
       pointer-events: none;
     }
@@ -13,12 +12,16 @@ html {
         z-index: 100;
         right: 25%;
         left: 25%;
-        bottom: 0;
+        bottom: 8vh;
         width: 50vw;
         opacity: 90%;
 
         * {
           text-align: center;
+        }
+
+        div.ReactPlayer{
+          display: none;
         }
       }
     }
