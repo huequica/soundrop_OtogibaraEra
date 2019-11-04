@@ -24,7 +24,7 @@ window.onload = () => {
           <Components.Button button_label='ダメやん！' audio_src={ DAME }/>
         </div>
         <div className='columns'>
-          <Components.Button button_label='(真相発作)' audio_src={ HEART_ATTACK }/>
+          <Components.Button button_label='(心臓発作)' audio_src={ HEART_ATTACK }/>
           <Components.Button button_label='(ダッシュ音)' audio_src={ DASH_SOUND }/>
         </div>
       </div>
