@@ -1,9 +1,23 @@
 @import "~bulma/bulma";
 
+$ThemeColor: #FFBE5C;
+$Background_Color: rgb(255, 217, 161);
+
 html {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   body {
-    div#background{
-      pointer-events: none;
+
+    video {
+      position: absolute;
+      width: 100%;
+      object-fit: cover;
     }
     
     div#app {
@@ -15,7 +29,7 @@ html {
         bottom: 8vh;
         width: 50vw;
         opacity: 0.9;
-        background-color: #FFBE5C;
+        background-color: $ThemeColor;
         * {
           text-align: center;
         }
