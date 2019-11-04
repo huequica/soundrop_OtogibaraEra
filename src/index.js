@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import * as Components from './components.js';
 
+import Background1 from './video/OtogibaraEra_Background.mp4'
+
 import GOMI from './audio/ゴミカス_○ね.mp3';
 import KUSO from './audio/クソが.mp3';
 import DAME from './audio/ダメやん.mp3';
@@ -30,5 +32,5 @@ window.onload = () => {
   }
   
   ReactDOM.render(<App />,document.querySelector('div#app'));
-  ReactDOM.render(<Components.Background />, document.querySelector('div#background'));
+  ReactDOM.render(<Components.Background url={Background1} />, document.querySelector('div#background'));
 }
