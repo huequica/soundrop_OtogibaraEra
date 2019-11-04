@@ -2,27 +2,39 @@ import React from 'react';
 
 export function Document() {
 
-  return (
-    <div class="modal">
-      <div class="modal-background"></div>
+  const [Active, setActive] = React.useState(false);
 
-      <div class="modal-card">
+  const toggleActive = React.useCallback(
+    () => setActive((prev) => !prev)
+  , [setActive]);
+
+  return (
+
+    <React.Fragment >
+      <button className='button is-rounded is-link for-document' onClick={toggleActive}>
+        ？
+      </button>
+
+      <div className={Active? 'modal is-active' : 'modal'}>
+      <div className="modal-background" onClick={toggleActive}></div>
+
+      <div className="modal-card">
         
-        <header class="modal-card-head">
-          <p class="modal-card-title">Modal title</p>
-          <button class="delete" aria-label="close"></button>
+        <header className="modal-card-head">
+          <p className="modal-card-title">Modal title</p>
+          <button className="delete" aria-label="close" onClick={toggleActive}></button>
         </header>
 
-        <section class="modal-card-body">
+        <section className="modal-card-body">
           hogehoge
         </section>
          
-        <footer class="modal-card-foot">
-          <button class="button is-success">Save changes</button>
-          <button class="button">Cancel</button>
+        <footer className="modal-card-foot">
         </footer>
 
       </div>
     </div>
+
+    </React.Fragment >
   );
 }
