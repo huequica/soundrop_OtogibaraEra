@@ -15,7 +15,7 @@ export function Button(props){
   };
 
   const ended = () => {
-    console.log('おわた');
+    setPlay(false);
   } 
 
   return(
