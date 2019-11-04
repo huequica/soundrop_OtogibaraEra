@@ -14,9 +14,13 @@ export function Button(props){
     audio_src: PropTypes.object.isRequired
   };
 
+  const ended = () => {
+    setPlay(false);
+  } 
+
   return(
     <div className='column'>
-      <ReactPlayer className='ReactPlayer' url={ props.audio_src } playing={Play} />
+      <ReactPlayer className='ReactPlayer' url={ props.audio_src } playing={Play} onEnded={ended} />
       <button className='button is-rounded' onClick={togglePlay}>{props.button_label}</button>
     </div>
   );
