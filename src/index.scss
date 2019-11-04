@@ -7,10 +7,6 @@ html {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  * {
-    margin: 0;
-    padding: 0;
-  }
 
   body {
 
@@ -20,10 +16,28 @@ html {
       object-fit: cover;
     }
     
+    div#document {
+      button.is-rounded.for-document {
+        position: fixed;
+        right: 2vw;
+        top: 2vh;
+        z-index: 11;
+
+        width: 8%;
+        height: 8%;
+
+        span.icon{
+          width: 3em;
+          height: 3em;  
+        }
+  
+      }
+    }
+
     div#app {
       div.box {
         position: absolute;
-        z-index: 100;
+        z-index: 10;
         right: 25%;
         left: 25%;
         bottom: 8vh;
