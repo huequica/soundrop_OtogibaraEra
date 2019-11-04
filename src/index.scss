@@ -20,6 +20,15 @@ html {
       object-fit: cover;
     }
     
+    div#document {
+      button.is-rounded.is-link.for-document {
+        position: fixed;
+        right: 2vw;
+        top: 2vh;
+        z-index: 11;
+      }
+    }
+
     div#app {
       div.box {
         position: absolute;
