@@ -1,4 +1,5 @@
 import React from 'react';
+import ICON_INFO from './information.svg';
 
 export function Document() {
 
@@ -11,8 +12,10 @@ export function Document() {
   return (
 
     <React.Fragment >
-      <button className='button is-rounded is-link for-document' onClick={toggleActive}>
-        ？
+      <button className='button is-rounded for-document' onClick={toggleActive}>
+        <span className="icon">
+          <img src={ ICON_INFO }></img>
+        </span>
       </button>
 
       <div className={Active? 'modal is-active' : 'modal'}>

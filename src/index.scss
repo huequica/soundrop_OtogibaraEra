@@ -21,11 +21,20 @@ html {
     }
     
     div#document {
-      button.is-rounded.is-link.for-document {
+      button.is-rounded.for-document {
         position: fixed;
         right: 2vw;
         top: 2vh;
         z-index: 11;
+
+        width: 8%;
+        height: 8%;
+
+        span.icon{
+          width: 3em;
+          height: 3em;  
+        }
+  
       }
     }
 
