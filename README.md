@@ -3,7 +3,7 @@
 日本語のreadmeは[こちら](README_ja.md)になります
 
 # soundrop_OtogibaraEra
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eb978ef3-ef55-4bfe-88e0-75968cebf9b0/deploy-status)](https://app.netlify.com/sites/suspicious-curran-504da5/deploys)
 >**HolySh\*t!!!!!!!!!!!**  
 >**F*ck!!!!!!!!!**
 
