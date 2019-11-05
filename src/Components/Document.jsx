@@ -1,5 +1,4 @@
 import React from 'react';
-import ICON_INFO from './information.svg';
 
 export function Document() {
 
@@ -14,7 +13,7 @@ export function Document() {
     <React.Fragment >
       <button className='button is-rounded for-document' onClick={toggleActive}>
         <span className="icon">
-          <img src={ ICON_INFO }></img>
+          <img src={ process.env.PUBLIC_URL + '/information.svg' } alt='help' ></img>
         </span>
       </button>
 
