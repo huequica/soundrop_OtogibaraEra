@@ -13,7 +13,7 @@ export function Document() {
     <React.Fragment >
       <button className='button is-rounded for-document' onClick={toggleActive}>
         <span className="icon">
-          <img src={ process.env.PUBLIC_URL + '/information.svg' }></img>
+          <img src={ process.env.PUBLIC_URL + '/information.svg' } alt='help' ></img>
         </span>
       </button>
 
