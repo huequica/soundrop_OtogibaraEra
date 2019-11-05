@@ -9,6 +9,8 @@ export function Background(props) {
      width=''
      height=''
      playing={true}
+     muted={true}
+     playsinline={true}
      volume={0}
      controls={false}
      loop
