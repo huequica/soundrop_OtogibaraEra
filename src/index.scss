@@ -37,7 +37,8 @@ html {
     div#app {
       div.box {
         overflow-y: auto;
-
+        height: auto;
+        max-height: 80vh;
         position: absolute;
         z-index: 10;
         right: 25%;
@@ -65,11 +66,5 @@ html {
     width: 80vw !important;
     left: 12.5% !important;
     right: 12.5% !important;
-  }
-}
-
-@media (max-height: 800px){
-  div.box{
-    height: 80vh;
   }
 }
