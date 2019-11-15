@@ -1,5 +1,5 @@
 // キャッシュファイルの指定
-var CACHE_NAME = 'pwa-sample-caches';
+var CACHE_NAME = 'soundrop_otogibara';
 var urlsToCache = [];
 
 // インストール処理
