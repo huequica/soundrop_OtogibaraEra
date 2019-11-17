@@ -27,11 +27,13 @@ jobs:
           name: building
           command: npm run build
 
-      - add_ssh_keys
+      - add_ssh_keys:
+          fingerprints:
+            - "${KEY_FINGERPRINT}"
 
       - run: 
           name: Deploy to EC2 docker-compose Server
-          command: ssh ${USER_NAME}@${HOST_NAME} 'rm -rf ~/refine_huequica.xyz/works/content/soundrop_otogibara && cd soundrop_OtogibaraEra && git pull && npm i && npm run build && mv build ~/refine_huequica.xyz/works/content/soundrop_otogibara'
+          command: ssh ${USER_NAME}@${HOST_NAME} -p ${SSH_PORT}'rm -rf ~/refine_huequica.xyz/works/content/soundrop_otogibara && cd soundrop_OtogibaraEra && git pull && npm i && npm run build && mv build ~/refine_huequica.xyz/works/content/soundrop_otogibara'
 workflows:
   version: 2
   Build and Test:
