@@ -1,0 +1,37 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.16.0-browsers
+    working_directory: ~/soundrop_otogibaraera
+
+    steps:
+      - run:
+          name: Escape Japanese characters
+          command: 'git config --global core.quotepath false'
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-depedencies-{{ checksum "package.json" }}
+            - v1-depedencies-
+      - run:
+          name: Install depends with npm
+          command: npm install
+
+      - save_cache:
+          key: v1-depedencies-{{ checksum "package.json" }}
+          paths:
+            - "node_modules"
+      
+      - run: 
+          name: building
+          command: npm run build
+
+      - run: 
+          name: Deploy to EC2 Server
+          command: ls
+workflows:
+  version: 2
+  Build and Test:
+    jobs:
+      - build
