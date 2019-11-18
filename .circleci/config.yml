@@ -35,7 +35,7 @@ jobs:
             ssh-keyscan -p ${SSH_PORT} ${HOST_NAME} >> ~/.ssh/known_hosts  
       - run: 
           name: Deploy to EC2 docker-compose Server
-          command: ssh -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME} 'zsh deploy_soundrop_otogibara.sh'
+          command: ssh -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME} 'cd soundrop_OtogibaraEra && npm run deploy'
 workflows:
   version: 2
   Build and Test:
