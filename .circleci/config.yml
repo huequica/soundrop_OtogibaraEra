@@ -37,10 +37,10 @@ jobs:
       - run:
           name: remove old files
           command: ssh -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME} 'rm -rf ${PROJECT_DIRECTORY}'
-          
+
       - run: 
           name: Deploy to EC2 docker-compose Server
-          command: "scp -P ${SSH_PORT} soundrop_otogibaraera/build  ${USER_NAME}@${HOST_NAME}:${PROJECT_DIRECTORY}"
+          command: "scp -r -P ${SSH_PORT} build  ${USER_NAME}@${HOST_NAME}:${PROJECT_DIRECTORY}"
 workflows:
   version: 2
   Build and Test:
