@@ -1,0 +1,70 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.16.0-browsers
+    working_directory: ~/soundrop_otogibaraera
+
+    steps:
+      - run:
+          name: Escape Japanese characters
+          command: 'git config --global core.quotepath false'
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-depedencies-{{ checksum "package.json" }}
+            - v1-depedencies-
+      - run:
+          name: Install depends with npm
+          command: npm install
+
+      - save_cache:
+          key: v1-depedencies-{{ checksum "package.json" }}
+          paths:
+            - "node_modules"
+      
+      - run: 
+          name: building
+          command: npm run build
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./
+  
+
+  deploy:
+    docker:
+      - image: circleci/node:10.16.0-browsers
+    working_directory: ~/soundrop_otogibaraera
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - add_ssh_keys
+
+      - run:  
+          name: Start ssh-keyscan  
+          command: |  
+            ssh-keyscan -p ${SSH_PORT} ${HOST_NAME} >> ~/.ssh/known_hosts 
+            
+      - run:
+          name: remove old files
+          command: ssh -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME} 'rm -rf ${PROJECT_DIRECTORY}'
+
+      - run: 
+          name: Deploy to EC2 docker-compose Server
+          command: "scp -r -P ${SSH_PORT} build  ${USER_NAME}@${HOST_NAME}:${PROJECT_DIRECTORY}"
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
