@@ -35,7 +35,7 @@ jobs:
             ssh-keyscan -p ${SSH_PORT} ${HOST_NAME} >> ~/.ssh/known_hosts  
       - run: 
           name: Deploy to EC2 docker-compose Server
-          command: ssh -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME} 'echo hello'
+          command: ssh -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME} 'cd soundrop_OtogibaraEra && git pull && npm i && npm run build && rm -rf ~/refine_huequica.xyz/works/content/soundrop_otogibara && mv build ~/refine_huequica.xyz/works/content/soundrop_otogibara'
 workflows:
   version: 2
   Build and Test:
