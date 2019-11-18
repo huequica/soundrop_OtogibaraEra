@@ -32,10 +32,14 @@ jobs:
       - run:  
           name: Start ssh-keyscan  
           command: |  
-            ssh-keyscan -p ${SSH_PORT} ${HOST_NAME} >> ~/.ssh/known_hosts  
+            ssh-keyscan -p ${SSH_PORT} ${HOST_NAME} >> ~/.ssh/known_hosts 
+            
+      - run:
+          name: remove old files
+          command: rm ${PROJECT_DIRECTORY}
       - run: 
           name: Deploy to EC2 docker-compose Server
-          command: ssh -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME} 'cd soundrop_OtogibaraEra && npm run deploy'
+          command: "scp build -p ${SSH_PORT} ${USER_NAME}@${HOST_NAME}:${PROJECT_DIRECTORY}"
 workflows:
   version: 2
   Build and Test:
