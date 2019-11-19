@@ -3,6 +3,16 @@
 English README is [here](README.md)
 
 # soundrop_OtogibaraEra
+<div align="center">
+	<img src="README_images/Logo.png" alt="Soundrop_OtogibaraEra">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eb978ef3-ef55-4bfe-88e0-75968cebf9b0/deploy-status)](https://app.netlify.com/sites/suspicious-curran-504da5/deploys)
 >**あああゴミカスーーーーーッ！！！！！**  
 >**◯ねェェェェェッ！！！！！**
