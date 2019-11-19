@@ -1,16 +1,56 @@
 env:
   browser: true
   es6: true
+
 extends:
-  - standard
+  - eslint:recommended
+  - plugin:react/recommended
+
 globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
+  # `process.env`が使えないのは困る
+  process: true
+
 parserOptions:
   ecmaFeatures:
+    experimentalObjectRestSpread: true
     jsx: true
   ecmaVersion: 2018
   sourceType: module
+
 plugins:
   - react
-rules: {}
+
+rules: 
+  # `var`を使ったら怒るよ
+  no-var: error
+  
+  # セミコロン抜かないで
+  semi: error
+
+  # インデントは2で守ってね
+  indent:
+    - error
+    - 2
+  
+  # `console.log`は消しておいて
+  no-console: error
+
+  # ブロック演算子はスペース入れてね
+  block-spacing: error
+
+  # 演算子の前後のスペースは絶対抜かないで
+  space-infix-ops: error
+
+  # アロー演算子前後のスペース強制
+  arrow-spacing: error
+
+  # タブとスペースを混ぜないで
+  no-mixed-spaces-and-tabs: error
+
+settings:
+  react:
+    createClass: 'createReactClass'
+    pragma: 'React'
+    version: 'detect'
