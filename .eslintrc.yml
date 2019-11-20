@@ -29,6 +29,9 @@ rules:
   # セミコロン抜かないで
   semi: error
 
+  # カンマのあとはスペースを入れてくれ
+  comma-spacing: error
+  
   # インデントは2で守ってね
   indent:
     - error
