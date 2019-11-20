@@ -14,11 +14,11 @@ export function Background(props) {
       url={ props.url }
       width=''
       height=''
-      playing={true}
-      muted={true}
-      playsinline={true}
-      volume={0}
-      controls={false}
+      playing={ true }
+      muted={ true }
+      playsinline={ true }
+      volume={ 0 }
+      controls={ false }
       loop
     />
   );

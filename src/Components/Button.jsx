@@ -21,8 +21,8 @@ export function Button(props){
 
   return(
     <div className='column'>
-      <ReactPlayer className='ReactPlayer' url={ props.audio_src } playing={Play} onEnded={ended} />
-      <button className='button is-rounded' onClick={togglePlay}>{props.button_label}</button>
+      <ReactPlayer className='ReactPlayer' url={ props.audio_src } playing={ Play } onEnded={ ended } />
+      <button className='button is-rounded' onClick={ togglePlay }>{ props.button_label }</button>
     </div>
   );
 }

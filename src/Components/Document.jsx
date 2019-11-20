@@ -12,20 +12,20 @@ export function Document() {
   return (
 
     <React.Fragment >
-      <button className='button is-rounded for-document' onClick={toggleActive}>
+      <button className='button is-rounded for-document' onClick={ toggleActive }>
         <span className="icon">
           <img src={ process.env.PUBLIC_URL + '/information.svg' } alt='help' ></img>
         </span>
       </button>
 
-      <div className={Active ? 'modal is-active' : 'modal'}>
-        <div className="modal-background" onClick={toggleActive}></div>
+      <div className={ Active ? 'modal is-active' : 'modal' }>
+        <div className="modal-background" onClick={ toggleActive }></div>
 
         <div className="modal-card">
         
           <header className="modal-card-head">
             <p className="modal-card-title">About this webapp</p>
-            <button className="delete" aria-label="close" onClick={toggleActive}></button>
+            <button className="delete" aria-label="close" onClick={ toggleActive }></button>
           </header>
 
           <section className="modal-card-body">

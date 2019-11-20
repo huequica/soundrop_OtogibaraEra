@@ -41,5 +41,5 @@ window.onload = () => {
   
   ReactDOM.render(<Components.Document />, document.querySelector('div#document'));
   ReactDOM.render(<App />, document.querySelector('div#app'));
-  ReactDOM.render(<Components.Background url={Background1} />, document.querySelector('div#background'));
+  ReactDOM.render(<Components.Background url={ Background1 } />, document.querySelector('div#background'));
 };
