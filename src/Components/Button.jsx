@@ -9,7 +9,6 @@ export function Button(props){
     () => setPlay((prev) => !prev)
     , [setPlay]
   );
-  var hoge = null;
 
   Button.propTypes = {
     button_label: PropTypes.string.isRequired,
