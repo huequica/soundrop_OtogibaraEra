@@ -7,7 +7,8 @@ export function Button(props){
 
   const togglePlay = React.useCallback(
     () => setPlay((prev) => !prev)
-  , [setPlay]);
+    , [setPlay]
+  );
 
   Button.propTypes = {
     button_label: PropTypes.string.isRequired,
@@ -16,12 +17,12 @@ export function Button(props){
 
   const ended = () => {
     setPlay(false);
-  } 
+  };
 
   return(
     <div className='column'>
-      <ReactPlayer className='ReactPlayer' url={ props.audio_src } playing={Play} onEnded={ended} />
-      <button className='button is-rounded' onClick={togglePlay}>{props.button_label}</button>
+      <ReactPlayer className='ReactPlayer' url={ props.audio_src } playing={ Play } onEnded={ ended } />
+      <button className='button is-rounded' onClick={ togglePlay }>{ props.button_label }</button>
     </div>
   );
 }

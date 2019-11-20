@@ -4,8 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import * as Components from './components.js';
 
-import Background1 from './video/OtogibaraEra_Background.mp4'
-
+import Background1 from './video/OtogibaraEra_Background.mp4';
 const PUBLIC_URL = process.env.PUBLIC_URL;
 
 window.onload = () => {
@@ -33,14 +32,14 @@ window.onload = () => {
         </div>
 
         <div className='columns'>
-        <Components.Button button_label='ダメやん！'  audio_src={  PUBLIC_URL + '/audio/ダメやん.mp3'  }/>
-        <Components.Button button_label='うるせえな！'  audio_src={  PUBLIC_URL + '/audio/うるせえな.mp3'  }/>
+          <Components.Button button_label='ダメやん！'  audio_src={  PUBLIC_URL + '/audio/ダメやん.mp3'  }/>
+          <Components.Button button_label='うるせえな！'  audio_src={  PUBLIC_URL + '/audio/うるせえな.mp3'  }/>
         </div>
       </div>
     );
   }
   
-  ReactDOM.render(<Components.Document />, document.querySelector('div#document'))
-  ReactDOM.render(<App />,document.querySelector('div#app'));
-  ReactDOM.render(<Components.Background url={Background1} />, document.querySelector('div#background'));
-}
+  ReactDOM.render(<Components.Document />, document.querySelector('div#document'));
+  ReactDOM.render(<App />, document.querySelector('div#app'));
+  ReactDOM.render(<Components.Background url={ Background1 } />, document.querySelector('div#background'));
+};

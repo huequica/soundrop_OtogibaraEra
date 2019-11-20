@@ -1,6 +1,7 @@
 version: 2
 jobs:
-  build:
+
+  lint:
     docker:
       - image: circleci/node:10.16.0-browsers
     working_directory: ~/soundrop_otogibaraera
@@ -22,7 +23,41 @@ jobs:
           key: v1-depedencies-{{ checksum "package.json" }}
           paths:
             - "node_modules"
-      
+    
+      # Start Running ESLint
+      - run:
+          name: Running ESLint at src/
+          command: |
+            mkdir -p /tmp/eslint-reports/src_dir
+            node_modules/.bin/eslint src/ --format junit --output-file /tmp/eslint-reports/src_dir/results.xml
+
+      - store_test_results:
+          path: /tmp/eslint-reports/src_dir
+        
+      - run:
+          name: Running ESLint at src/Components/
+          command: |
+            mkdir -p /tmp/eslint-reports/components_dir
+            node_modules/.bin/eslint src/Components/* --format junit --output-file /tmp/eslint-reports/components_dir/results.xml
+
+      - store_test_results:
+          path: /tmp/eslint-reports/components_dir
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./
+
+
+  build:
+    docker:
+      - image: circleci/node:10.16.0-browsers
+    working_directory: ~/soundrop_otogibaraera
+
+    steps:
+      - attach_workspace:
+          at: .
+  
       - run: 
           name: building
           command: npm run build
@@ -33,7 +68,7 @@ jobs:
             - ./
   
 
-  deploy:
+  Deploy:
     docker:
       - image: circleci/node:10.16.0-browsers
     working_directory: ~/soundrop_otogibaraera
@@ -59,10 +94,13 @@ jobs:
 
 workflows:
   version: 2
-  build:
+  Lintcheck_And_Build:
     jobs:
-      - build
-      - deploy:
+      - lint
+      - build:
+          requires:
+            - lint
+      - Deploy:
           requires:
             - build
           filters:
