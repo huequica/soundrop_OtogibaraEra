@@ -6,7 +6,8 @@ export function Document() {
 
   const toggleActive = React.useCallback(
     () => setActive((prev) => !prev)
-  , [setActive]);
+    , [setActive]
+  );
 
   return (
 
