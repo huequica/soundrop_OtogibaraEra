@@ -18,7 +18,7 @@ export function Document() {
         </span>
       </button>
 
-      <div className={Active? 'modal is-active' : 'modal'}>
+      <div className={Active ? 'modal is-active' : 'modal'}>
       <div className="modal-background" onClick={toggleActive}></div>
 
       <div className="modal-card">
