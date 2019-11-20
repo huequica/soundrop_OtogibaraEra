@@ -7,7 +7,8 @@ export function Button(props){
 
   const togglePlay = React.useCallback(
     () => setPlay((prev) => !prev)
-  , [setPlay]);
+    , [setPlay]
+  );
 
   Button.propTypes = {
     button_label: PropTypes.string.isRequired,
@@ -16,7 +17,7 @@ export function Button(props){
 
   const ended = () => {
     setPlay(false);
-  } 
+  };
 
   return(
     <div className='column'>
