@@ -31,7 +31,13 @@ rules:
 
   # カンマのあとはスペースを入れてくれ
   comma-spacing: error
-  
+
+  # 式代入の前後はスペース入れてね
+  react/jsx-curly-spacing: 
+    - error
+    - when: always
+      children: true
+
   # インデントは2で守ってね
   indent:
     - error
