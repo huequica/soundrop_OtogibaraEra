@@ -50,3 +50,7 @@ $ npm i
 ```bash
 $ npm start
 ```
+
+# Contribute Guideline
+Contributing Guideline is [here](.github/contributing.md).  
+Please check before creating issue or PR.

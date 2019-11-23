@@ -50,3 +50,7 @@ $ npm i
 ```bash
 $ npm start
 ```
+
+# コントリビュートについて
+コントリビュートするときのガイドラインは[こちら](.github/contributing_ja.md)です。  
+IssueやPRを発行する前に確認をお願いします。
