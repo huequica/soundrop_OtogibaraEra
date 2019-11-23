@@ -14,6 +14,7 @@
 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eb978ef3-ef55-4bfe-88e0-75968cebf9b0/deploy-status)](https://app.netlify.com/sites/suspicious-curran-504da5/deploys)
+[![CircleCI](https://circleci.com/gh/huequica/soundrop_OtogibaraEra.svg?style=svg)](https://circleci.com/gh/huequica/soundrop_OtogibaraEra)
 >**HolySh\*t!!!!!!!!!!!**  
 >**F*ck!!!!!!!!!**
 
