@@ -13,8 +13,8 @@
 </div>
 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/eb978ef3-ef55-4bfe-88e0-75968cebf9b0/deploy-status)](https://app.netlify.com/sites/suspicious-curran-504da5/deploys)
-[![CircleCI](https://circleci.com/gh/huequica/soundrop_OtogibaraEra.svg?style=svg)](https://circleci.com/gh/huequica/soundrop_OtogibaraEra)
+[<img src="https://img.shields.io/badge/netlify-Success-00C7B7.svg?logo=netlify&style=popout">](https://app.netlify.com/sites/suspicious-curran-504da5/deploys)
+[<img src="https://img.shields.io/badge/CircleCI-Passing-343434.svg?logo=circleci&style=popout">](https://circleci.com/gh/huequica/soundrop_OtogibaraEra)
 >**HolySh\*t!!!!!!!!!!!**  
 >**F*ck!!!!!!!!!**
 
