@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import * as Components from './components.js';
 
-import Background1 from './video/OtogibaraEra_Background.mp4';
 const PUBLIC_URL = process.env.PUBLIC_URL;
 
 window.onload = () => {
@@ -41,5 +40,5 @@ window.onload = () => {
   
   ReactDOM.render(<Components.Document />, document.querySelector('div#document'));
   ReactDOM.render(<App />, document.querySelector('div#app'));
-  ReactDOM.render(<Components.Background url={ Background1 } />, document.querySelector('div#background'));
+  ReactDOM.render(<Components.Background url={ PUBLIC_URL + '/video/OtogibaraEra_Background.mp4' } />, document.querySelector('div#background'));
 };
