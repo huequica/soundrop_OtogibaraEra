@@ -35,6 +35,11 @@ window.onload = () => {
           <Components.Button button_label='うるせえな！'  audio_src={  PUBLIC_URL + '/audio/うるせえな.mp3'  }/>
           <Components.Button button_label='は？'  audio_src={  PUBLIC_URL + '/audio/は？.mp3'  }/>
         </div>
+
+        <div className='columns'>
+          <Components.Button button_label='もう無理'  audio_src={  PUBLIC_URL + '/audio/もう無理.mp3'  }/>
+        </div>
+
       </div>
     );
   }
