@@ -90,7 +90,7 @@ jobs:
 
       - run: 
           name: Deploy to EC2 docker-compose Server
-          command: scp -r -P ${SSH_PORT} build ${USER_NAME}@${HOST_NAME}:${PROJECT_DIRECTORY}
+          command: scp -r -P ${SSH_PORT} ./build ${USER_NAME}@${HOST_NAME}:${PROJECT_DIRECTORY}
 
 workflows:
   version: 2
