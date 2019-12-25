@@ -33,7 +33,14 @@ window.onload = () => {
         <div className='columns'>
           <Components.Button button_label='ダメやん！'  audio_src={  PUBLIC_URL + '/audio/ダメやん.mp3'  }/>
           <Components.Button button_label='うるせえな！'  audio_src={  PUBLIC_URL + '/audio/うるせえな.mp3'  }/>
+          <Components.Button button_label='は？'  audio_src={  PUBLIC_URL + '/audio/は？.mp3'  }/>
         </div>
+
+        <div className='columns'>
+          <Components.Button button_label='もう無理'  audio_src={  PUBLIC_URL + '/audio/もう無理.mp3'  }/>
+          <Components.Button button_label='ふざけんちゃうぞ'  audio_src={  PUBLIC_URL + '/audio/ふざけんちゃうぞ.mp3'  }/>
+        </div>
+
       </div>
     );
   }
